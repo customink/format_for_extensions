@@ -1,0 +1,86 @@
+= format_for
+
+Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for to dynamically define reusable formats for any field you want.
+
+By default, format_for comes with smart formats for email addresses and postal codes.  Even better, no code repetition!  Use constructs that make sense such as "validates_email_for :account_owner" and "validates_postal_code_for :address_postal_code".
+
+
+== System Requirements
+format_for should work with Rails 2.3.5 and above.  However, I have not yet tested this with Rails 3.1. 
+
+
+== Installation
+Modify your Gemfile to include format_for:
+  
+  gem 'format_for'
+
+Run `bundle install`.  You thought it would be harder?
+
+
+== Usage 
+By default, ArValidationExtensions supports email and postal code formats.  These can be leveraged by including code such as:
+
+  class Person < ActiveRecord::Base
+    # Notice how the normal ActiveRecord Validation options can still be used...
+    validates_email_for :email_address
+    validates_email_for :home_email_address, :if => :full_validation_required
+    validates_postal_code_for :postal_code, :allow_blank => true
+  end
+
+
+=== Configuration
+
+Default configurations are specified in the gem's config/ar_validation_extensions.yml file.  If you wish to modify the default regular expressions or messages reported when validation fails, simply copy this file to the config directory in your Rails root folder.  You can also manually create [rails_root]/config/ar_validation_extensions.yml if you'd like to.
+
+The format of this file is as follows:
+
+  # ar_validation_extensions.yml
+  en:
+    email:
+      regex: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/
+      message: "is invalid.  The address should be in a format similar to 'user@example.com'."
+
+PLEASE NOTE that localization is not really supported at this time.  By default we only support english mappings, the 'en' locale exists to allow us to more easily support localization in the future.
+
+If you modify this file, you will need to bounce your application server (or restart your rails console) as this gem caches configurations at load time.
+
+
+=== The Hotness
+You can dynamically create your own format validators!  For instance, add this to your [rails_root]/config/ar_validation_extensions.yml file:
+
+  # ar_validation_extensions.yml
+  en:
+    hotness:
+      regex: /^hot/
+      message: "is not hot!"
+
+And you now have a completely useless method to validate that fields begin with 'hot':
+
+  class Person < ActiveRecord::Base
+    # Validation will fail if your first_name does not begin with 'hot'
+    validates_hotness_for :first_name
+  end
+
+As you might have guessed, the gem is driven off of the configuration file.  The same way you can add validators, you can remove them by simply deleting lines from the configuration file.
+
+
+== TODO
+- We intend to support more locales other then english.  The idea being that we'd check the current local, and load the regex/message accordingly.
+- Support some other highly repetitious fields, such as phone number.
+
+
+== Contributing to format_for
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Karle Durante. See LICENSE.txt for
+further details.
+

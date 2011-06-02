@@ -1,0 +1,9 @@
+# Default validation configurations...
+en:
+  postal_code:
+    regex: /^[0-9]{5}(-[0-9]{4})?|[ABCEGHJKLMNPRSTVXY]\d[A-Z] *\d[A-Z]\d?$/
+    message: "is invalid.  Valid formats: 94105-0011 or 94105 or T2X 1V4 or T2X1V4"
+
+  email:
+    regex: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/
+    message: "is invalid.  The address should be in a format similar to 'user@example.com'."
