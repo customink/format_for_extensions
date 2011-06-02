@@ -1,18 +1,18 @@
-= format_for
+= format_for_extensions
 
-Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for to dynamically define reusable formats for any field you want.
+Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for_extensions to dynamically define reusable formats for any field you want.
 
-By default, format_for comes with smart formats for email addresses and postal codes.  Even better, no code repetition!  Use constructs that make sense such as "validates_email_for :account_owner" and "validates_postal_code_for :address_postal_code".
+By default, format_for_extensions comes with smart formats for email addresses and postal codes.  Even better, no code repetition!  Use constructs that make sense such as "validates_email_for :account_owner" and "validates_postal_code_for :address_postal_code".
 
 
 == System Requirements
-format_for should work with Rails 2.3.5 and above.  However, I have not yet tested this with Rails 3.1. 
+format_for_extensions should work with Rails 2.3.5 and above.  However, I have not yet tested this with Rails 3.1. 
 
 
 == Installation
-Modify your Gemfile to include format_for:
+Modify your Gemfile to include format_for_extensions:
   
-  gem 'format_for'
+  gem 'format_for_extensions'
 
 Run `bundle install`.  You thought it would be harder?
 
@@ -30,11 +30,11 @@ By default, ArValidationExtensions supports email and postal code formats.  Thes
 
 === Configuration
 
-Default configurations are specified in the gem's config/ar_validation_extensions.yml file.  If you wish to modify the default regular expressions or messages reported when validation fails, simply copy this file to the config directory in your Rails root folder.  You can also manually create [rails_root]/config/ar_validation_extensions.yml if you'd like to.
+Default configurations are specified in the gem's config/format_for_extensions.yml file.  If you wish to modify the default regular expressions or messages reported when validation fails, simply copy this file to the config directory in your Rails root folder.  You can also manually create [rails_root]/config/format_for_extensions.yml if you'd like to.
 
 The format of this file is as follows:
 
-  # ar_validation_extensions.yml
+  # format_for_extensions.yml
   en:
     email:
       regex: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/
@@ -46,9 +46,9 @@ If you modify this file, you will need to bounce your application server (or res
 
 
 === The Hotness
-You can dynamically create your own format validators!  For instance, add this to your [rails_root]/config/ar_validation_extensions.yml file:
+You can dynamically create your own format validators!  For instance, add this to your [rails_root]/config/format_for_extensions.yml file:
 
-  # ar_validation_extensions.yml
+  # format_for_extensions.yml
   en:
     hotness:
       regex: /^hot/
@@ -69,7 +69,7 @@ As you might have guessed, the gem is driven off of the configuration file.  The
 - Support some other highly repetitious fields, such as phone number.
 
 
-== Contributing to format_for
+== Contributing to format_for_extensions
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
