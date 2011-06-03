@@ -19,6 +19,16 @@ module FormatForExtensions
       end
       
       @@config[locale]
-    end      
+    end
+    
+    # Returns the configured fields
+    def self.fields
+      values.keys
+    end
+    
+    # returns the configured properties (of the first field)
+    def self.properties
+      values[fields.first].keys
+    end
   end
 end

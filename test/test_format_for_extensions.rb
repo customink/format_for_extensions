@@ -14,7 +14,7 @@ class TestFormatForExtensions < Test::Unit::TestCase
   
       should "define data accessor methods for each configured field" do
         @fields.each do |field|
-          assert ActiveRecord::Base.respond_to?("#{field}_regex")
+          assert ActiveRecord::Base.respond_to?("#{field}_regexp")
           assert ActiveRecord::Base.respond_to?("#{field}_message")
         end
       end

@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{format_for_extensions}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Karle Durante"]
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "format_for_extensions.gemspec",
     "lib/format_for_extensions.rb",
     "lib/format_for_extensions/config.rb",
+    "pkg/format_for_extensions-0.1.0.gem",
     "test/helper.rb",
     "test/lib/format_for_extensions/test_config.rb",
     "test/models/abstract_model.rb",
