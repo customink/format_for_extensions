@@ -18,7 +18,7 @@ Run `bundle install`.  You thought it would be harder?
 
 
 == Usage 
-By default, ArValidationExtensions supports email and postal code formats.  These can be leveraged by including code such as:
+By default, format_for_extensions supports email and postal code formats.  These can be leveraged by including code such as:
 
   class Person < ActiveRecord::Base
     # Notice how the normal ActiveRecord Validation options can still be used...
