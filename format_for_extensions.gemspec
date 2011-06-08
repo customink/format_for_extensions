@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "lib/format_for_extensions.rb",
     "lib/format_for_extensions/config.rb",
     "pkg/format_for_extensions-0.1.0.gem",
+    "pkg/format_for_extensions-0.1.1.gem",
     "test/helper.rb",
     "test/lib/format_for_extensions/test_config.rb",
     "test/models/abstract_model.rb",
