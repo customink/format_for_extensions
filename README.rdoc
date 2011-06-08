@@ -81,6 +81,6 @@ As you might have guessed, the gem is driven off of the configuration file.  The
 
 == Copyright
 
-Copyright (c) 2011 Karle Durante. See LICENSE.txt for
+Copyright (c) 2011 CustomInk. See LICENSE.txt for
 further details.
 

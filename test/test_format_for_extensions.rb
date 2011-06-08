@@ -43,7 +43,7 @@ class TestFormatForExtensions < Test::Unit::TestCase
         end
       end
     
-      should "consider the email to be valid" do
+      should "consider the email to be invalid" do
         person = Person.new
         ['user@example', 'yahoo.us.ca', 'a.com'].each do |email|
           person.email = email
