@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{Extends ActiveRecord validates_format_of validations with reusable and customizable validation methods.}
   gem.description = %Q{Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for_extensions to dynamically define reusable formats for any ActiveRecord model attribute you want.}
   gem.email = "kdurante@customink.com"
-  gem.authors = ["Karle Durante"]
+  gem.authors = ["Karle Durante", "Justin Molineaux"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
