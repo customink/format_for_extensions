@@ -34,7 +34,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
+  bundler (>= 1.0.0)
   jeweler (~> 1.6.2)
   mocha (= 0.9.5)
   rails (>= 2.3.5)

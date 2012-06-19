@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Karle Durante", "Justin Molineaux"]
-  s.date = %q{2011-06-10}
+  s.date = %q{2012-06-19}
   s.description = %q{Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for_extensions to dynamically define reusable formats for any ActiveRecord model attribute you want.}
   s.email = %q{kdurante@customink.com}
   s.extra_rdoc_files = [
@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/customink/format_for_extensions}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
+  s.rubygems_version = %q{1.4.2}
   s.summary = %q{Extends ActiveRecord validates_format_of validations with reusable and customizable validation methods.}
 
   if s.respond_to? :specification_version then
@@ -46,14 +46,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>, [">= 2.3.5"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.2"])
       s.add_development_dependency(%q<mocha>, ["= 0.9.5"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
     else
       s.add_dependency(%q<rails>, [">= 2.3.5"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.2"])
       s.add_dependency(%q<mocha>, ["= 0.9.5"])
       s.add_dependency(%q<rcov>, [">= 0"])
@@ -61,7 +61,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<rails>, [">= 2.3.5"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<bundler>, [">= 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.2"])
     s.add_dependency(%q<mocha>, ["= 0.9.5"])
     s.add_dependency(%q<rcov>, [">= 0"])
