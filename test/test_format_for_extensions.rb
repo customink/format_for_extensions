@@ -29,7 +29,7 @@ class TestFormatForExtensions < Test::Unit::TestCase
   
       should "consider the postal code to be invalid" do
         person = Person.new
-        ['9410', 'abc', '123-123', '123456', '1234567', '12345678', '12345-678'].each do |postal_code|
+        ['9410', 'abc', '123-123', '123456', '1234567', '12345678', '12345-678', 'blahN8P1Z4', 'N8P1Z'].each do |postal_code|
           person.postal_code = postal_code
           assert !person.valid?
         end
