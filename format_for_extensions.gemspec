@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/customink/format_for_extensions"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
+  s.rubygems_version = "1.8.23"
   s.summary = "Extends ActiveRecord validates_format_of validations with reusable and customizable validation methods."
 
   if s.respond_to? :specification_version then
