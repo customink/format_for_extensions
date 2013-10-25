@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{format_for_extensions}
-  s.version = "0.1.4"
+  s.name = "format_for_extensions"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Karle Durante", "Justin Molineaux"]
-  s.date = %q{2012-06-19}
-  s.description = %q{Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for_extensions to dynamically define reusable formats for any ActiveRecord model attribute you want.}
-  s.email = %q{kdurante@customink.com}
+  s.date = "2013-10-25"
+  s.description = "Tired of repeating 'validates_format_of' with the same regex expression across your models only to validate the same email address and postal code fields?  So am I.  Use format_for_extensions to dynamically define reusable formats for any ActiveRecord model attribute you want."
+  s.email = "kdurante@customink.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -35,11 +35,11 @@ Gem::Specification.new do |s|
     "test/models/person.rb",
     "test/test_format_for_extensions.rb"
   ]
-  s.homepage = %q{http://github.com/customink/format_for_extensions}
+  s.homepage = "http://github.com/customink/format_for_extensions"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.4.2}
-  s.summary = %q{Extends ActiveRecord validates_format_of validations with reusable and customizable validation methods.}
+  s.rubygems_version = "1.8.11"
+  s.summary = "Extends ActiveRecord validates_format_of validations with reusable and customizable validation methods."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
